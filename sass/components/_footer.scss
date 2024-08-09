@@ -1,0 +1,158 @@
+$font-syne: 'Syne', sans-serif;
+$font-dm: 'DM Sans', sans-serif;
+body{
+    margin: 0;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #131842;
+        &--content{
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            flex: 1;
+            width: 100%;
+            &--logo-section{
+                display: flex;
+                align-items: center;
+                &--footer-logo {
+                    max-width: 443px;
+                    max-height: 185px;
+                    & img{
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+
+            &--contact-section{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                padding: 25px;
+                max-width: 350px;
+                gap: 30px;
+
+                &--contacts{
+                    & p{
+                        text-decoration: underline;
+                    }
+                }
+                &--para{
+                    @media (max-width:1024px) {
+                        display: flex;
+                        width: 100%;
+                    }
+                }
+                & p{
+                    color: #fff;
+                    font-family: $font-syne;
+                    line-height: 1.2;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                &--links{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 30px;
+                    flex-wrap: wrap;
+                    & img{
+                        max-width: 20px;
+                        max-height: 20px;
+                    }
+                }
+                @media (max-width:1024px) {
+                    display: flex;
+                    flex-direction: row;
+                    // width: 100%;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+                }
+            }
+            &--nav-links{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                padding: 30px 10px;
+                max-width: 200px;
+                width: 100%;
+                gap: 10px;
+                font-family: $font-syne;
+                & ul{
+                    padding: 0;
+                }
+                & h3{
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+                & a{
+                    font-family: $font-syne;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    opacity: 0.5;
+                }
+                & li{
+                    
+                    list-style: none;
+                }
+                @media (max-width:1024px) {
+                    padding: 0;
+                }
+            } 
+            @media (max-width:1024px) {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            } 
+        }
+        &--horizontal-line{
+            border-top: 1px solid #9B9B9B;
+            width: 92%;
+            margin: 0 4%;
+            margin-top: 50px;
+        }
+        &--bottom{
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex: 1;
+            &--left{
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                margin-left: 0;
+                padding-left: 50px;
+                & p{
+                    color: #fff;
+                    font-family: $font-syne;
+                    font-size: 14px;
+                    font-weight: 500;  
+                }
+            }
+            &--right{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: end;
+                justify-content: end;
+                right: 0;
+                position: absolute;
+                padding-right: 50px;
+                gap: 10px;
+                & a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-family: $font-syne;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+}
