@@ -14,9 +14,9 @@
                 </div>
                 <div class="col-md-6 homepage--hero-container-wrapper--hero-container--right-section p-0">
                     <div class="homepage--hero-container-wrapper--hero-container--right-section--right hero-image-slider">
-                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_1.png">
-                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_2.png">
-                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_3.png">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_1.webp">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_2.webp">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_3.webp">
                     
                     </div>
                 </div>
@@ -46,11 +46,11 @@
                 <div class="col-md-6">
                     <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section">
                         <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--first-column-section">
-                            <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--first-column-section--image-1" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image1.png">
+                            <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--first-column-section--image-1" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image1.webp">
                             <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--first-column-section--image-2"></div>
                         </div>
                         <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section">
-                            <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--img-3" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image5.png">
+                            <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--img-3" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image5.webp">
                             <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-2">
                                 <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-2--image-4">
                                 </div>
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3">
-                                <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3--image-6" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image4.png">
+                                <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3--image-6" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image4.webp">
                                 <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3--image-7">
                                 </div>
                             </div>
@@ -70,10 +70,10 @@
     </div>
     <!-- section-3 -->
     <div class="homepage--features-section-wrapper">
-        <div class="container">
+        <div class="container g-0">
             <div class="homepage--features-section-wrapper--features-section">
                 <h2>We are a <span>Healthcare</span> commercialization partner  </h2>
-            <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/About.png">
+            <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/About.webp">
             </div>
         </div>
     </div>
@@ -83,7 +83,7 @@
             <div class="homepage--portfolio-wrapper--portfolio">
             <h4>Our <span>Portfolio</span></h4>
             <p>Our portfolio is spread across multiple healthcare sectors</p>
-                <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/portfolio-image.png">
+                <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/portfolio-image.webp">
             </div>
         </div>
     </div>
@@ -123,9 +123,9 @@
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--name">MyPharmaDash</div>
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Systemizing Growth through Design</div>
                                 </div>
-                                <div class="homepage--product-section-wrapper--product-section--container--year">
+                                <!-- <div class="homepage--product-section-wrapper--product-section--container--year">
                                     2022
-                                </div>
+                                </div> -->
                             </div>
                             <div class="homepage--product-section-wrapper--product-section--container--product-image">
                                 <!-- <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images product-slider">
@@ -135,8 +135,8 @@
                                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.jpg">
                                 </div> -->
                                 <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images d-flex overflow-hidden">
-                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_1.png">
-                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_4.png">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_1.webp">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_4.webp">
                                 </div>
                             </div>
                         </div>
@@ -155,9 +155,9 @@
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--name">Patient Communication Platform</div>
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Making effective communication through Design</div>
                                 </div>
-                                <div class="homepage--product-section-wrapper--product-section--container--year">
+                                <!-- <div class="homepage--product-section-wrapper--product-section--container--year">
                                     2021
-                                </div>
+                                </div> -->
                             </div>
                             <div class="homepage--product-section-wrapper--product-section--container--product-image">
                                 <!-- <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images product-slider">
@@ -167,8 +167,8 @@
                                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.jpg">
                                 </div> -->
                                 <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images d-flex overflow-hidden">
-                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_3.png">
-                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_2.png">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_3.webp">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_2.webp">
                                 </div>
                             </div>
                         </div>
@@ -187,9 +187,9 @@
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--name">EDI claims processing</div>
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Systemizing Growth through Design</div>
                                 </div>
-                                <div class="homepage--product-section-wrapper--product-section--container--year">
+                                <!-- <div class="homepage--product-section-wrapper--product-section--container--year">
                                     2022
-                                </div>
+                                </div> -->
                             </div>
                             <div class="homepage--product-section-wrapper--product-section--container--product-image">
                                 <!-- <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images product-slider">
@@ -199,8 +199,8 @@
                                     <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-L0nipfx-Ry4-unsplash.jpg">
                                 </div> -->
                                 <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images d-flex overflow-hidden">
-                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.jpg">
-                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.webp">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.webp">
                                 </div>
                             </div>
                         </div>
@@ -776,12 +776,17 @@ jQuery(document).ready(function($) {
   $('#contact-us-button').click(function() {
     $('html, body').animate({
       scrollTop: $('#contact-us').offset().top
-    }, 500); // Duration of the scroll (in milliseconds)
-  });
+    }, 500, function() {
+        // Add #contact-us to the URL without reloading the page
+        window.history.pushState(null, null, '#contact-us');
+    });
+});
   // Function to set the active class
   function setActiveMenuItem() {
         var currentPath = window.location.pathname;
         var foundActive = false;
+
+        console.log(currentPath)
 
         $('#menu-list li a').each(function() {
             var href = $(this).attr('href');

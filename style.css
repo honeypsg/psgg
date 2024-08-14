@@ -48,6 +48,10 @@ body {
 }
 .footer--content--contact-section--contacts p {
   text-decoration: underline;
+  cursor: pointer;
+}
+.footer--content--contact-section--contacts p:hover {
+  color: #E68369;
 }
 @media (max-width: 1024px) {
   .footer--content--contact-section--para {
@@ -542,6 +546,15 @@ body {
 .homepage--features-section-wrapper--features-section h2 span {
   color: #E68369;
 }
+.homepage--features-section-wrapper--features-section h2::after {
+  background: url('data:image/svg+xml,<svg width="171" height="7" viewBox="0 0 171 7" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.015625" y="0.889893" width="170.854" height="5.90629" rx="2.95315" fill="%23E68369"/></svg>');
+  content: "";
+  position: absolute;
+  width: 170.85px;
+  height: 7px;
+  bottom: -63px;
+  left: 0;
+}
 .homepage--features-section-wrapper--features-section img {
   position: relative;
   top: -70px;
@@ -728,10 +741,14 @@ body {
 .homepage--product-section-wrapper--product-section--container--product-image {
   margin-top: 54px;
 }
-.homepage--product-section-wrapper--product-section--container--product-image img {
+.homepage--product-section-wrapper--product-section--container--product-image--slider-images {
+  border-radius: 10px;
+}
+.homepage--product-section-wrapper--product-section--container--product-image--slider-images img {
   max-width: 698px;
   max-height: 444px;
   margin-right: 20px;
+  border-radius: 10px;
 }
 .homepage--product-section-wrapper--product-section--container:last-child {
   border: none !important;

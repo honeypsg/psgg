@@ -38,6 +38,10 @@ body{
                 &--contacts{
                     & p{
                         text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    & p:hover{
+                        color: #E68369;
                     }
                 }
                 &--para{
