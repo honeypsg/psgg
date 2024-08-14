@@ -29,16 +29,16 @@
 				    </a>
           </div>
         </div>
-        <div class="col-md-7"> 
+        <div class="col-md-8"> 
           <div class="header--headerMenu">
-						<ul>
+						<ul id="menu-list">
 							<?php echo wp_nav_menu( array( 'items_wrap' => '%3$s', 'menu' => 17, 'container' => '' ) ); ?>
 					  </ul>
           </div>
         </div>
-        <div class="col-md-3 p-0">
+        <div class="col-md-2 p-0">
           <div class="d-flex justify-content-end"> 
-            <div class="header--headerContact">
+            <div class="header--headerContact" id="contact-us-button">
               Contact Us
             </div>
           </div>

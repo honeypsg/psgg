@@ -20,10 +20,21 @@ if ( ! function_exists('write_log')) {
    }
 }
 
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+  public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+      $id = 'menu-item-' . $item->ID; // Custom ID based on menu item ID
+      $output .= sprintf( '<li id="%s" class="%s"><a href="%s">%s</a>',
+          esc_attr( $id ),
+          esc_attr( implode( ' ', $item->classes ) ),
+          esc_attr( $item->url ),
+          esc_html( $item->title )
+      );
+  }
+}
+
 //add_theme_support('post-thumbnails', ['post', 'page']);
 add_theme_support('title-tag');
 add_image_size( 'profile-image', 600, 688, true );
-add_image_size( 'eyelid', 600, 372, true );
 
 if (function_exists('acf_add_options_page')) {
   acf_add_options_page('Theme Settings');
@@ -42,6 +53,7 @@ function get_theme_version_number() {
      echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . PHP_EOL;
  }
 add_action( 'wp_head', 'enqueue_google_fonts' );
+
 function bootstrap_theme_scripts_styles()
 {
  $filename = get_stylesheet_directory().'/style.css';
@@ -58,47 +70,14 @@ function bootstrap_theme_scripts_styles()
     '5.3.0',
     true
   );
- wp_enqueue_script(
-    'select2',
-    'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
-    ['jquery'],
-    '4.1.0-rc',
-    true
-  );
-  wp_enqueue_script(
-    'jquery-ui',
-    'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-    ['jquery'],    
-    '1.12.1',
-    true
-  );
+
+
+
   wp_enqueue_style('slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null );
- 
-  wp_enqueue_style(
-   'fancybox',
-   '//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css',[],'4.0'
-  );
-  
-  wp_enqueue_script(
-   'fancybox',
-   '//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js',
-   ['jquery'],
-   '4.0',
-   true
-  );
- 
-  wp_enqueue_script(
-    'AOS',
-    'https://unpkg.com/aos@next/dist/aos.js',
-    ['jquery'],
-    '3.0',
-    false
-  );
-    
-  wp_enqueue_style('AOS', 'https://unpkg.com/aos@next/dist/aos.css', array(), null );  
+
 
   wp_enqueue_script(
-    'slick',
+    'slick1',
     '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
     ['jquery'],
     '1.8.1',
@@ -130,21 +109,6 @@ function smartwp_remove_wp_block_library_css(){
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
 
-/* Add menus to the site  */
-if (
-  !file_exists(
-    get_template_directory() . '/inc/bootstrap/bootstrap-5-wordpress-navbar-walker.php'
-  )
-) {
-  // file does not exist... return an error.
-  return new WP_Error(
-    'class-wp-bootstrap-navwalker-missing',
-    __(
-      'It appears the class-wp-bootstrap-navwalker.php file may be missing.',
-      'wp-bootstrap-navwalker'
-    )
-  );
-} 
 
 /* Add classes to body */
 function add_slug_body_class($classes)
@@ -192,27 +156,3 @@ function redirect_404_to_front_page() {
 }
 add_action('template_redirect', 'redirect_404_to_front_page');
 
-function generateCamelCase($input) {
-  // Extract the first two words
-  $words = explode(' ', $input, 3); // Limit to 3 to keep any remaining words intact
-  $firstTwoWords = implode(' ', array_slice($words, 0, 2));
-
-  // Remove special characters
-  $cleanedString = preg_replace('/[^a-zA-Z0-9\s]/', '', $firstTwoWords);
-
-  // Convert to camel case
-  $words = explode(' ', $cleanedString);
-  $camelCase = lcfirst(implode('', array_map('ucfirst', $words)));
-
-  return $camelCase;
-}
-
-function extract_oembed_url($oembed_value) {
-  preg_match('/src="([^"]+)"/', $oembed_value, $matches);
-  if (isset($matches[1])) {
-      // Extracted URL from the src attribute
-      $oembed_url = $matches[1];
-      return esc_url($oembed_url);
-  }
-  return null;
-}

@@ -52,6 +52,7 @@ body{
                     line-height: 1.2;
                     font-size: 18px;
                     font-weight: 400;
+                    opacity: 0.8;
                 }
                 &--links{
                     display: flex;
@@ -60,9 +61,11 @@ body{
                     align-items: center;
                     gap: 30px;
                     flex-wrap: wrap;
-                    & img{
-                        max-width: 20px;
-                        max-height: 20px;
+                   
+                    & a{
+                        & svg:hover path {
+                            fill: #E68369;
+                        }
                     }
                 }
                 @media (max-width:1024px) {

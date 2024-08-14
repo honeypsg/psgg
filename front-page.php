@@ -6,34 +6,42 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="homepage--hero-container-wrapper--hero-container--left">
-                        <!-- <h1>Work Together for success</h1> -->
-                         <h1><?php echo get_field('hero_heading') ?></h1>
-                        <!-- <p>We help leading brands and startups build software by providing reliable development teams and experienced consultants.</p> -->
-                         <p><?php echo get_field('hero_content') ?></p>
+                        <h1>Work together for success</h1>
+                         <!-- <h1><?php echo get_field('hero_heading') ?></h1> -->
+                        <p>We help leading brands and startups build software by providing reliable development teams and experienced consultants.</p>
+                         <!-- <p><?php echo get_field('hero_content') ?></p> -->
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="homepage--hero-container-wrapper--hero-container--right">
-                    <?php echo wp_get_attachment_image(get_field('hero_image'),'full',false,array('class'=>'img-fluid'))?>
+                <div class="col-md-6 homepage--hero-container-wrapper--hero-container--right-section p-0">
+                    <div class="homepage--hero-container-wrapper--hero-container--right-section--right hero-image-slider">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_1.png">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_2.png">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/hero_image_3.png">
+                    
                     </div>
                 </div>
             </div>
         </div>
         <div class="homepage--hero-container-wrapper--discover-section">
-                <p><?php echo get_field('discover_heading') ?></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="57" viewBox="0 0 38 57" fill="none">
-                <path d="M35.625 18.2083C35.625 9.02652 28.1817 1.58325 19 1.58325C9.81827 1.58325 2.375 9.02652 2.375 18.2083V38.7916C2.375 47.9733 9.81827 55.4166 19 55.4166C28.1817 55.4166 35.625 47.9733 35.625 38.7916V18.2083Z" stroke="black" stroke-width="3.16667"/>
-                <path d="M19.0544 20.5295V38.92" stroke="black" stroke-width="3.16667"/>
-                </svg>
+                <!-- <p><?php echo get_field('discover_heading') ?></p> -->
+                <p>Discover</p>
+                <button id="discover">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="57" viewBox="0 0 38 57" fill="none">
+                    <path d="M35.625 18.2083C35.625 9.02652 28.1817 1.58325 19 1.58325C9.81827 1.58325 2.375 9.02652 2.375 18.2083V38.7916C2.375 47.9733 9.81827 55.4166 19 55.4166C28.1817 55.4166 35.625 47.9733 35.625 38.7916V18.2083Z" stroke="black" stroke-width="3.16667"/>
+                    <path d="M19.0544 20.5295V38.92" stroke="black" stroke-width="3.16667"/>
+                    </svg>
+                </button>
             </div>
     </div>
     <!-- section-2 -->
-    <div class="homepage--psgg-intro-section-wrapper">
+    <div class="homepage--psgg-intro-section-wrapper" id="about">
         <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section">
             <div class="row d-flex align-items-center">
                 <div class="col-md-6">
-                    <h2><?php echo get_field('intro_heading') ?></h2>
-                    <p><?php echo get_field('intro_description') ?></p>
+                    <!-- <h2><?php echo get_field('intro_heading') ?></h2> -->
+                    <h2><span>Hi</span>, we're <br />P.S. Global Group</h2>
+                    <!-- <p><?php echo get_field('intro_description') ?></p> -->
+                     <p>PSGG is a team of creative geniuses that excel at going a step ahead and pushing the bar a bit higher to achieve extraordinary results. We define ourselves as “Global Innovators” to our clients and excel in multiple domains to support and work on client requirements.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section">
@@ -50,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3">
-                                <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3--image-6" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image1.png">
+                                <img class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3--image-6" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/grid-image4.png">
                                 <div class="homepage--psgg-intro-section-wrapper--psgg-intro-section--image-section--second-column-section--image-section-3--image-7">
                                 </div>
                             </div>
@@ -60,6 +68,7 @@
             </div>
         </div>
     </div>
+    <!-- section-3 -->
     <div class="homepage--features-section-wrapper">
         <div class="container">
             <div class="homepage--features-section-wrapper--features-section">
@@ -68,16 +77,18 @@
             </div>
         </div>
     </div>
+    <!-- section-4 -->
     <div class="homepage--portfolio-wrapper">
         <div class="container">
             <div class="homepage--portfolio-wrapper--portfolio">
-            <h4>Our Portfolio</h4>
+            <h4>Our <span>Portfolio</span></h4>
             <p>Our portfolio is spread across multiple healthcare sectors</p>
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/portfolio-image.png">
             </div>
         </div>
     </div>
-    <div class="homepage--partners-wrapper">
+    <!-- section-5 -->
+    <div class="homepage--partners-wrapper" id="our-clients">
         <div class="container">
             <div class="homepage--partners-wrapper--partners">
                 <h4>Our partners</h4>
@@ -94,12 +105,12 @@
             </div>
         </div>
     </div>
-    <!-- poducts section -->
-    <div class="homepage--production-section-wrapper">
+    <!-- section-6 -->
+    <div class="homepage--product-section-wrapper" id="products">
         <div class="container">
-            <div class="homepage--production-section-wrapper--production-section">
-                <h1>Lovable Products from vision to launch</h1>
-                <div class="homepage--production-section-wrapper--production-section--container">
+            <div class="homepage--product-section-wrapper--product-section">
+                <h1>Lovable <span class="homepage--product-section-wrapper--product-section--shade-pink">Products</span> <span class="homepage--product-section-wrapper--product-section--shade-gray">from vision to launch</span></h1>
+                <div class="homepage--product-section-wrapper--product-section--container">
                     <div class="row">
                         <div class="col-md-2">
                             <ul>
@@ -108,21 +119,30 @@
                         </div>
                         <div class="col-md-10">
                             <div class="d-flex justify-content-between">
-                                <div class="homepage--production-section-wrapper--production-section--container--product-details">
-                                    <div class="homepage--production-section-wrapper--production-section--container--product-details--name">MyPharmaDash</div>
-                                    <div class="homepage--production-section-wrapper--production-section--container--product-details--details">Systemizing Growth through Design</div>
+                                <div class="homepage--product-section-wrapper--product-section--container--product-details">
+                                    <div class="homepage--product-section-wrapper--product-section--container--product-details--name">MyPharmaDash</div>
+                                    <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Systemizing Growth through Design</div>
                                 </div>
-                                <div class="homepage--production-section-wrapper--production-section--container--year">
+                                <div class="homepage--product-section-wrapper--product-section--container--year">
                                     2022
                                 </div>
                             </div>
-                            <div class="homepage--production-section-wrapper--production-section--container--product-image">
-                            <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/prod-image1.png">
+                            <div class="homepage--product-section-wrapper--product-section--container--product-image">
+                                <!-- <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images product-slider">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/abillion-F0e3AdcwVbM-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-L0nipfx-Ry4-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.jpg">
+                                </div> -->
+                                <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images d-flex overflow-hidden">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_1.png">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_4.png">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="homepage--production-section-wrapper--production-section--container">
+                <div class="homepage--product-section-wrapper--product-section--container">
                     <div class="row">
                         <div class="col-md-2">
                             <ul>
@@ -131,21 +151,30 @@
                         </div>
                         <div class="col-md-10">
                             <div class="d-flex justify-content-between">
-                                <div class="homepage--production-section-wrapper--production-section--container--product-details">
-                                    <div class="homepage--production-section-wrapper--production-section--container--product-details--name">Patient Communication Platform</div>
-                                    <div class="homepage--production-section-wrapper--production-section--container--product-details--details">Making effective communication through Design</div>
+                                <div class="homepage--product-section-wrapper--product-section--container--product-details">
+                                    <div class="homepage--product-section-wrapper--product-section--container--product-details--name">Patient Communication Platform</div>
+                                    <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Making effective communication through Design</div>
                                 </div>
-                                <div class="homepage--production-section-wrapper--production-section--container--year">
+                                <div class="homepage--product-section-wrapper--product-section--container--year">
                                     2021
                                 </div>
                             </div>
-                            <div class="homepage--production-section-wrapper--production-section--container--product-image">
-                            <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/prod-image1.png">
+                            <div class="homepage--product-section-wrapper--product-section--container--product-image">
+                                <!-- <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images product-slider">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/abillion-F0e3AdcwVbM-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-L0nipfx-Ry4-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.jpg">
+                                </div> -->
+                                <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images d-flex overflow-hidden">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_3.png">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/product_image_2.png">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="homepage--production-section-wrapper--production-section--container">
+                <div class="homepage--product-section-wrapper--product-section--container">
                     <div class="row">
                         <div class="col-md-2">
                             <ul>
@@ -154,16 +183,25 @@
                         </div>
                         <div class="col-md-10">
                             <div class="d-flex justify-content-between">
-                                <div class="homepage--production-section-wrapper--production-section--container--product-details">
-                                    <div class="homepage--production-section-wrapper--production-section--container--product-details--name">EDI claims processing</div>
-                                    <div class="homepage--production-section-wrapper--production-section--container--product-details--details">Systemizing Growth through Design</div>
+                                <div class="homepage--product-section-wrapper--product-section--container--product-details">
+                                    <div class="homepage--product-section-wrapper--product-section--container--product-details--name">EDI claims processing</div>
+                                    <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Systemizing Growth through Design</div>
                                 </div>
-                                <div class="homepage--production-section-wrapper--production-section--container--year">
+                                <div class="homepage--product-section-wrapper--product-section--container--year">
                                     2022
                                 </div>
                             </div>
-                            <div class="homepage--production-section-wrapper--production-section--container--product-image">
-                                <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/prod-image1.png">
+                            <div class="homepage--product-section-wrapper--product-section--container--product-image">
+                                <!-- <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images product-slider">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/abillion-F0e3AdcwVbM-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-L0nipfx-Ry4-unsplash.jpg">
+                                </div> -->
+                                <div class="homepage--product-section-wrapper--product-section--container--product-image--slider-images d-flex overflow-hidden">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/tran-mau-tri-tam-AK3BXL-1AFw-unsplash.jpg">
+                                    <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/balazs-ketyi-sScmok4Iq1o-unsplash.jpg">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,8 +210,8 @@
         </div>
     </div>
     
-<!-- tech-stack -->
-    <div class="homepage--tech-stack-section-wrapper">
+    <!-- section-7 -->
+    <div class="homepage--tech-stack-section-wrapper" id="tech-stack">
         <div class="container">
             <div class="homepage--tech-stack-section-wrapper--tech-stack-section">
                 <h3>Our <span>Tech Stack<span></h3>
@@ -697,7 +735,7 @@
         </div>
     </div>
     <!-- contact us section -->
-    <div class="homepage--contact-us-wrapper">
+    <div class="homepage--contact-us-wrapper" id="contact-us">
         <div class="homepage--contact-us-wrapper--contact-us">
             <h4>Contact us</h4>
             <p>Convert your idea into a digital product with our team</p>
@@ -716,7 +754,7 @@
                 </div>
                 <div class="d-flex flex-column">
                     <label>Requirements</label>
-                    <input placeholder="Brief us your requirements" />
+                    <textarea rows="4" cols="50" placeholder="Brief us your requirements"></textarea>
                 </div>
                 <div class="text-center">
                     <button>Submit</button>
@@ -726,3 +764,49 @@
     </div>
 </div>
 <?php get_footer(); ?>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $('#discover').click(function() {
+    $('html, body').animate({
+      scrollTop: $('#about').offset().top
+    }, 500); // Duration of the scroll (in milliseconds)
+  });
+  $('#contact-us-button').click(function() {
+    $('html, body').animate({
+      scrollTop: $('#contact-us').offset().top
+    }, 500); // Duration of the scroll (in milliseconds)
+  });
+  // Function to set the active class
+  function setActiveMenuItem() {
+        var currentPath = window.location.pathname;
+        var foundActive = false;
+
+        $('#menu-list li a').each(function() {
+            var href = $(this).attr('href');
+            
+            // Check if the current path matches the href of the link
+            if (currentPath === href || (currentPath === '/' && href === '/home')) {
+                $(this).parent().addClass('active');
+                foundActive = true;
+            }
+        });
+
+        // If no menu item matches, default to the first one (Home)
+        if (!foundActive) {
+            $('#menu-list li:first').addClass('active');
+        }
+    }
+
+    // Set active class on page load
+    setActiveMenuItem();
+
+    // Set active class on click
+    $('#menu-list li a').on('click', function() {
+        $('#menu-list li').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+});
+
+</script>

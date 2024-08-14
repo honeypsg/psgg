@@ -1,9 +1,38 @@
 jQuery(document).ready(function($) {
-  $('.my-slick-slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      adaptiveHeight: true
-  });
+    $('.product-slider').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     slidesToShow: 1,
+    //     prevArrow: false,
+    //     nextArrow: false,
+    //     autoplay: true,
+    //     autoplaySpeed: 3000,
+    //     speed: 3000,
+    //     centerMode:true,
+    //     adaptiveHeight: true,
+    //     initialSlide: 1,
+    // centerPadding: '0px',  
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight:true,
+    prevArrow:false,
+    nextArrow:false,
+    // autoplay:true,
+    dots: false,
+    infinite: false,
+        autoplaySpeed: 3000,
+        speed: 3000,
+    });
+    $('.hero-image-slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        prevArrow: false,
+        nextArrow: false,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        speed: 1500,
+        centerMode:false,  
+        adaptiveHeight: true,
+    });
 });
