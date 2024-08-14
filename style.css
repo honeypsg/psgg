@@ -583,7 +583,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-.homepage--portfolio-wrapper--portfolio h4 {
+.homepage--portfolio-wrapper--portfolio--content {
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homepage--portfolio-wrapper--portfolio--content h4 {
   color: #000;
   font-family: "Syne";
   font-size: 56px;
@@ -595,10 +602,10 @@ body {
   z-index: 0;
   position: relative;
 }
-.homepage--portfolio-wrapper--portfolio h4 span {
+.homepage--portfolio-wrapper--portfolio--content h4 span {
   color: #E68369;
 }
-.homepage--portfolio-wrapper--portfolio h4::before {
+.homepage--portfolio-wrapper--portfolio--content h4::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90" fill="none"><path d="M45 90C69.8528 90 90 69.8528 90 45C90 20.1472 69.8528 0 45 0C20.1472 0 0 20.1472 0 45C0 69.8528 20.1472 90 45 90Z" fill="%23ECCEAE"/></svg>');
   z-index: -1;
   content: "";
@@ -608,7 +615,7 @@ body {
   top: -15px;
   left: -58px;
 }
-.homepage--portfolio-wrapper--portfolio p {
+.homepage--portfolio-wrapper--portfolio--content p {
   color: #000;
   font-family: "Syne";
   font-size: 24px;

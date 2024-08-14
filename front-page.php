@@ -81,8 +81,10 @@
     <div class="homepage--portfolio-wrapper">
         <div class="container">
             <div class="homepage--portfolio-wrapper--portfolio">
-            <h4>Our <span>Portfolio</span></h4>
-            <p>Our portfolio is spread across multiple healthcare sectors</p>
+                <div class="homepage--portfolio-wrapper--portfolio--content">
+                    <h4>Our <span>Portfolio</span></h4>
+                    <p>Our portfolio is spread across multiple healthcare sectors</p>
+                </div>
                 <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/portfolio-image.webp">
             </div>
         </div>
@@ -774,13 +776,13 @@ jQuery(document).ready(function($) {
     }, 500); // Duration of the scroll (in milliseconds)
   });
   $('#contact-us-button').click(function() {
-    $('html, body').animate({
-      scrollTop: $('#contact-us').offset().top
-    }, 500, function() {
-        // Add #contact-us to the URL without reloading the page
-        window.history.pushState(null, null, '#contact-us');
+        $('html, body').animate({
+        scrollTop: $('#contact-us').offset().top
+        }, 500, function() {
+            // Add #contact-us to the URL without reloading the page
+            window.history.pushState(null, null, '#contact-us');
+        });
     });
-});
   // Function to set the active class
   function setActiveMenuItem() {
         var currentPath = window.location.pathname;
