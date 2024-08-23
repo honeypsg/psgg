@@ -24,7 +24,7 @@
   <div class="headerWrap d-flex justify-content-center" >
     <header class="header">
       <div class= "row align-items-center w-100">
-        <div class="col-md-2">  
+        <div class="col-lg-2 col-6">  
           <div class="header--headerLogo">
             <a href="<?php echo home_url(); ?>" class="logo">
 					    
@@ -50,23 +50,72 @@
 				    </a>
           </div>
         </div>
-        <div class="col-md-8"> 
+        <div class="col-lg-8 d-lg-block d-none"> 
           <div class="header--headerMenu">
 						<ul id="menu-list">
 							<?php echo wp_nav_menu( array( 'items_wrap' => '%3$s', 'menu' => 17, 'container' => '' ) ); ?>
 					  </ul>
           </div>
         </div>
-        <div class="col-md-2 p-0">
-          <div class="d-flex justify-content-end"> 
-            <div class="header--headerContact" id="contact-us-button">
+        <div class="col-lg-2 col-6 p-0 ">
+          <div class="header--headerContactSection"> 
+            <div class="header--headerContactSection--headerContact d-md-block d-none" id="contact-us-button">
               Contact Us
             </div>
+            <div class="d-lg-none">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="34" height="26" viewBox="0 0 34 26" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7913 12.9998C33.7913 12.5689 33.6201 12.1555 33.3154 11.8508C33.0106 11.546 32.5973 11.3748 32.1663 11.3748H1.83301C1.40203 11.3748 0.988706 11.546 0.683959 11.8508C0.379212 12.1555 0.208008 12.5689 0.208008 12.9998C0.208008 13.4308 0.379212 13.8441 0.683959 14.1489C0.988706 14.4536 1.40203 14.6248 1.83301 14.6248H32.1663C32.5973 14.6248 33.0106 14.4536 33.3154 14.1489C33.6201 13.8441 33.7913 13.4308 33.7913 12.9998ZM33.7913 2.1665C33.7913 1.73553 33.6201 1.3222 33.3154 1.01746C33.0106 0.712709 32.5973 0.541504 32.1663 0.541504H1.83301C1.40203 0.541504 0.988706 0.712709 0.683959 1.01746C0.379212 1.3222 0.208008 1.73553 0.208008 2.1665C0.208008 2.59748 0.379212 3.01081 0.683959 3.31555C0.988706 3.6203 1.40203 3.7915 1.83301 3.7915H32.1663C32.5973 3.7915 33.0106 3.6203 33.3154 3.31555C33.6201 3.01081 33.7913 2.59748 33.7913 2.1665ZM33.7913 23.8332C33.7913 23.4022 33.6201 22.9889 33.3154 22.6841C33.0106 22.3794 32.5973 22.2082 32.1663 22.2082H1.83301C1.40203 22.2082 0.988706 22.3794 0.683959 22.6841C0.379212 22.9889 0.208008 23.4022 0.208008 23.8332C0.208008 24.2641 0.379212 24.6775 0.683959 24.9822C0.988706 25.287 1.40203 25.4582 1.83301 25.4582H32.1663C32.5973 25.4582 33.0106 25.287 33.3154 24.9822C33.6201 24.6775 33.7913 24.2641 33.7913 23.8332Z" fill="black"/>
+              </svg> -->
+              <div class="menu-container">
+              <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">
+                  <!-- Default Menu Icon SVG -->
+                  <svg id="menu-svg" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 6h18M3 12h18m-18 6h18" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+              
+            </div>
           </div>
+          </div>
+          
         </div>
       </div>
     </div>
- 
+    <div id="menu" class="menu headerMobileMenu d-none">
+      <ul id="menu-list">
+				<?php echo wp_nav_menu( array( 'items_wrap' => '%3$s', 'menu' => 17, 'container' => '' ) ); ?>
+			</ul>     
+      <div class="">
+      <div id="contact-us-button" class="d-md-none d-block text-align-center">
+              Contact Us
+            </div>
+      </div>   
+    </div>
     </header>
 </div>
+
+<script type="text/javascript">
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const menuSvg = document.getElementById("menu-svg");
+    menu.classList.remove('d-none')
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+        menu.classList.remove('d-none')
+        menuIcon.innerHTML = `
+            <svg id="menu-svg" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6h18M3 12h18m-18 6h18" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;  // Revert to the menu icon SVG
+    } else {
+        menu.style.display = "block";
+        menuIcon.innerHTML = `
+            <svg id="menu-svg" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6l12 12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;  // Change to the X icon SVG
+    }
+    }
+</script>
  
