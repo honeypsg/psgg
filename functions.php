@@ -156,3 +156,15 @@ function redirect_404_to_front_page() {
 }
 add_action('template_redirect', 'redirect_404_to_front_page');
 
+function hide_preloader_script() {
+  ?>
+  <script>
+      window.addEventListener('load', function () {
+          const preloader = document.getElementById('preloader');
+          preloader.style.display = 'none';
+      });
+  </script>
+  <?php
+}
+add_action('wp_footer', 'hide_preloader_script');
+

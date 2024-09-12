@@ -2,7 +2,7 @@
 <html lang="en" class="m-0">
 
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -15,13 +15,16 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: light)">
-<link href="dark-mode-favicon.png" rel="icon" media="(prefers-color-scheme: dark)">
+  <link href="dark-mode-favicon.png" rel="icon" media="(prefers-color-scheme: dark)">
   <?php wp_head() ?> 
   <link />
 </head>
 
 <body <?php body_class(); ?>>
   <div class="headerWrap d-flex justify-content-center" >
+  <div id="custom-preloader">
+    <img  src="<?php echo get_stylesheet_directory_uri(); ?>/inc/images/NEW logo anim.gif" alt="Loading..." />
+</div>
     <header class="header">
       <div class= "row align-items-center w-100">
         <div class="col-lg-2 col-6">  
@@ -85,7 +88,7 @@
       <ul id="menu-list">
 				<?php echo wp_nav_menu( array( 'items_wrap' => '%3$s', 'menu' => 17, 'container' => '' ) ); ?>
 			</ul>     
-      <div class="">
+      <div class="d-flex justify-content-center">
       <div id="contact-us-button" class="d-md-none d-block text-align-center">
               Contact Us
             </div>

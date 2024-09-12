@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="homepage--hero-container-wrapper--hero-container--left">
-                        <h1>Work together for success</h1>
+                        <h1>Work together for <span>success</span></h1>
                          <!-- <h1><?php echo get_field('hero_heading') ?></h1> -->
                         <p>We help leading brands and startups build software by providing reliable development teams and experienced consultants.</p>
                          <!-- <p><?php echo get_field('hero_content') ?></p> -->
@@ -135,7 +135,7 @@
                             </ul>
                         </div>
                         <div class="col-lg-10 col-12">
-                            <div class="d-flex justify-content-lg-end justify-content-start">
+                            <div class="d-flex justify-content-lg-end justify-content-xl-start justify-content-start">
                                 <div class="homepage--product-section-wrapper--product-section--container--product-details">
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--name">MyPharmaDash</div>
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Systemizing Growth through Design</div>
@@ -167,7 +167,7 @@
                             </ul>
                         </div>
                         <div class="col-lg-10">
-                            <div class="d-flex justify-content-lg-end justify-content-start">
+                            <div class="d-flex justify-content-lg-end justify-content-xl-start justify-content-start">
                                 <div class="homepage--product-section-wrapper--product-section--container--product-details">
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--name">Patient Communication Platform</div>
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Making effective communication through Design</div>
@@ -199,7 +199,7 @@
                             </ul>
                         </div>
                         <div class="col-lg-10">
-                            <div class="d-flex justify-content-lg-end justify-content-start">
+                            <div class="d-flex justify-content-lg-end justify-content-xl-start justify-content-start">
                                 <div class="homepage--product-section-wrapper--product-section--container--product-details">
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--name">EDI claims processing</div>
                                     <div class="homepage--product-section-wrapper--product-section--container--product-details--details">Systemizing Growth through Design</div>
@@ -838,7 +838,7 @@
                 <h4>Contact us</h4>
                 <p>Convert your idea into a digital product with our team</p>
             </div>
-            <form id="myForm">
+            <form id="myForm" action="send_email.php" method="post">
                 <div class="d-flex flex-column">
                     <label>Your name*</label>
                     <input id="name" placeholder="Enter your name" />
@@ -864,6 +864,7 @@
 </div>
 <?php get_footer(); ?>
 
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {
@@ -960,5 +961,12 @@ jQuery(document).ready(function($) {
         element.parentNode.appendChild(error);
     }
 });
+
+window.addEventListener('load', function () {
+        const preloader = document.getElementById('custom-preloader');
+        setTimeout(function() {
+          preloader.classList.add('preloader-hidden');
+        }, 1500); 
+    });
 
 </script>
